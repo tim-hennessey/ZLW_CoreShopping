@@ -18,6 +18,7 @@ app.Animation = (function () {
 	var flag = document.getElementById('flag');
 	var sprite = document.getElementById('sprite');
 	var container = document.getElementsByClassName("container");
+	var resolve = document.getElementsByClassName("resolve");
 	
 
 	// --------------------------------------------------------------------------------------
@@ -43,6 +44,8 @@ app.Animation = (function () {
 		.to(txt2b, .5, {y:"+=10", opacity: 1, ease: Sine.easeInOut})
 
 		.to(curtain, .75, {opacity: 1, onComplete: function () {tl2.play();}}, "+=1.5")
+
+		.set(resolve, {display: "block"})
 
 		.from(container, .5, {scale:0, opacity: 0, ease: Sine.easeInOut})
 
